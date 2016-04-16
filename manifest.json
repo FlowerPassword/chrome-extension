@@ -1,7 +1,7 @@
 {
 "update_url":"http://clients2.google.com/service/update2/crx",
   "name": "Flower Password",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "manifest_version": 2,
   "description": "花密 Flower Password --- 可记忆的密码管理方案",
   "icons": {
