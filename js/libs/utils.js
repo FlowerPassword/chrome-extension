@@ -35,7 +35,7 @@ if (typeof jQuery === 'function') {
 
         $.fn.valLimited = function(value) {
             var maxlength = parseInt(this.prop('maxlength'));
-            if (maxlength < value.length) {
+            if (maxlength > 0 && maxlength < value.length) {
                 value = value.slice(0, maxlength);
             }
             this.val(value);
