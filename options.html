@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>花密 - 设置</title>
+<link rel="stylesheet" href="css/bootstrap.css" />
+<link rel="stylesheet" href="css/custom.css" />
+<link rel="stylesheet" href="css/options.css" />
+<script type="text/javascript" src="js/libs/jquery.js"></script>
+<script type="text/javascript" src="js/libs/utils.js"></script>
+<script type="text/javascript" src="js/options/base.js"></script>
+<script type="text/javascript" src="js/options/global.js"></script>
+<script type="text/javascript" src="js/options.js"></script>
+</head>
+<body>
+<header>
+	<h1>设置</h1>
+</header>
+<div id="main">
+	<fieldset class="form-horizontal">
+		<div class="control-group">
+			<label class="checkbox"><input id="default-enabled" type="checkbox" />默认在所有网站启用花密</label>
+		</div>
+		<div class="control-group">
+			<label class="checkbox"><input id="password-strength" type="checkbox" />检查并提示记忆密码强度</label>
+		</div>
+		<div class="control-group">
+			<label class="checkbox"><input id="transparent" type="checkbox" />花密窗口自动半透明</label>
+		</div>
+		<div class="control-group">
+			<label class="checkbox"><input id="copy-to-clipboard" type="checkbox" />自动将生成的密码复制到剪贴板</label>
+		</div>
+		<div class="control-group">
+			<label class="checkbox"><input id="last-key" type="checkbox" />自动保存并默认填入上次使用的区分代号</label>
+		</div>
+		<div class="control-group">
+			<label class="checkbox"><input id="fill-key" type="checkbox" />默认将网站域名填入区分代号</label>
+		</div>
+		<div class="control-group">
+			<label class="checkbox"><input id="append-scramble" type="checkbox" />默认在所有网站的默认区分代号后加上附加扰码</label>
+		</div>
+		<div class="control-group">
+			<label class="control-label" for="scramble">附加扰码</label>
+			<div class="controls"><input id="scramble" type="text" value="" /></div>
+		</div>
+	</fieldset>
+	<p>单击地址栏右边的花密图标，可针对该网站选择启用或停用花密插件，如下图所示。</p>
+	<p class="center"><img src="img/switch-screenshot.png" /></p>
+	<p>有别于一般密码管理方式，“花密”是一种可记忆、非储存的密码管理方案，你只需记住一个“记忆密码”加上“区分代号”就可以使用“花密”为不同的账号生成难以破解的强壮密码。<a href="http://flowerpassword.com/guide">>>介绍说明</a></p>
+</div>
+<footer>
+	<p>Copyright &copy; 2011-2012 &nbsp;&nbsp;&nbsp; <a href="http://flowerpassword.com/">FlowerPassword.com</a> &nbsp;&nbsp;&nbsp; All rights reserved.</p>
+</footer>
+</body>
+</html>

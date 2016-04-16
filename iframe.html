@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="css/bootstrap.css" />
+<link rel="stylesheet" href="css/custom.css" />
+<link rel="stylesheet" href="css/iframe.css" />
+<script type="text/javascript" src="js/libs/jquery.js"></script>
+<script type="text/javascript" src="js/libs/md5.js"></script>
+<script type="text/javascript" src="js/libs/utils.js"></script>
+<script type="text/javascript" src="js/core/flower-password.js"></script>
+<script type="text/javascript" src="js/core/hsimp.js"></script>
+<script type="text/javascript" src="js/core/hsimp.cp.js"></script>
+<script type="text/javascript" src="js/chrome/messages.js"></script>
+<script type="text/javascript" src="js/options/base.js"></script>
+<script type="text/javascript" src="js/options/global.js"></script>
+<script type="text/javascript" src="js/options/local.js"></script>
+<script type="text/javascript" src="js/options/iframe.js"></script>
+<script type="text/javascript" src="js/iframe.js"></script>
+</head>
+<body>
+<div id="main">
+	<span id="close" title="关闭 (全局：Alt+W，本窗口内：Enter或Esc)">关闭</span>
+	<header><img id="title" src="img/title.png" /></header>
+	<fieldset class="form-horizontal">
+		<div id="write-local-storage-failed" class="alert" style="display: none;">
+			<a class="close">&times;</a>
+			<div class="content">
+				<p>　您可能设置了“阻止网站设置任何数据”或“阻止第三方 Cookie 和网站数据”，这将导致花密无法保存设置。</p>
+				<p>　请您在Chrome设置中，打开“高级选项-&gt;内容设置-&gt;Cookie-&gt;管理例外情况”，添加“<span class="extension-id"></span>”，并将该项设置为“允许”。</p>
+			</div>
+		</div>
+		<div class="control-group first">
+			<label class="control-label" for="password">
+				<span class="help" title="选择一个与个人信息无关的密码，防止社会工程学破解">记忆密码</span>
+			</label>
+			<div class="controls"><input id="password" type="password" value="" placeholder="快捷键：Alt+S" /></div>
+			<div id="password-strength" class="alert with-arrow" style="display: none;">
+				<span class="arrow"></span>
+				<a class="close">&times;</a>
+				<div class="content">
+					<strong class="alert-heading level"></strong>
+					<ul class="message-list"></ul>
+				</div>
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label" for="key">
+				<span class="help" title="用于区别不同用途密码的简短代号，如淘宝账号可用“taobao”或“tb”等">区分代号</span>
+			</label>
+			<div class="controls"><input id="key" type="text" value="" /></div>
+			<div id="no-maxlength" class="alert with-arrow" style="display: none;">
+				<span class="arrow"></span>
+				<a class="close">&times;</a>
+				<div class="content">
+					<p>　旧版花密限制了区分代号的最大长度为15，新版花密已去除此限制，这意味着你可以使用更长更安全的区分代号。</p>
+					<p>　然而，此区分代号是由旧版花密生成的默认区分代号，其长度被限制为15，而由新版生成的默认区分代号则会更长。</p>
+					<p>　一旦您清除了历史记录，新的默认区分代号将导致最终生成的密码发生变化，这将导致您无法登录当前网站！</p>
+					<p>　因此，我们强烈建议您使用新的默认区分代号修改您在当前网站的密码。请您在输入新密码的时候，<a id="fill-default-key">点击这里生成新的默认区分代号</a>。</p>
+				</div>
+			</div>
+		</div>
+		<div class="control-group" title="对所有网站有效">
+			<label class="checkbox"><input id="fill-key" type="checkbox" />默认将网站域名填入区分代号</label>
+		</div>
+		<div class="control-group" title="只对本网站有效">
+			<label class="checkbox"><input id="append-scramble" type="checkbox" />在默认区分代号后加上<span class="help" title="添加到默认填入的区分代号后面，用于提高默认区分代号的强度，可适当加入分隔符，如“.abc”或“#abc”">附加扰码</span></label>
+		</div>
+		<div class="control-group" id="scramble-field" style="display: none;">
+			<label class="control-label" for="scramble">
+				<span class="help" title="添加到默认填入的区分代号后面，用于提高默认区分代号的强度，可适当加入分隔符，如“.abc”或“#abc”">附加扰码</span>
+			</label>
+			<div class="controls"><input id="scramble" type="text" value="" /></div>
+		</div>
+	</fieldset>
+	<div id="toolbar"><a href="http://flowerpassword.com/" target="_blank"><img src="img/home.png" />官网</a><a href="options.html" target="_blank"><img src="img/options.png" />设置</a></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,1 @@
+var getURL = chrome.extension.getURL;

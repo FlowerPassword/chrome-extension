@@ -1,0 +1,166 @@
+body {
+  overflow: hidden;
+}
+
+#main {
+  width: 250px;
+  padding: 10px;
+  border: 2px solid #08C;
+  position: relative;
+  line-height: 1;
+}
+
+#close {
+  border: 2px solid #08C;
+  font-weight: bold;
+  color: #FFF;
+  background: #08C;
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  cursor: pointer;
+}
+
+#close:before {
+  text-align: center;
+  line-height: 16px;
+  content: "\D7";
+  display: block;
+  width: 16px;
+  height: 16px;
+  position: relative;
+  top: -1px;
+}
+
+#title {
+  cursor: move;
+}
+
+.control-group.first {
+  margin-top: 12px;
+}
+
+.form-horizontal .control-group {
+  margin-bottom: 10px;
+}
+
+.control-group.info > label,
+.control-group.info .help-block,
+.control-group.info .help-inline {
+  color: #3a87ad;
+}
+.control-group.info input,
+.control-group.info select,
+.control-group.info textarea {
+  color: #3a87ad;
+  border-color: #3a87ad;
+}
+.control-group.info input:focus,
+.control-group.info select:focus,
+.control-group.info textarea:focus {
+  border-color: #2d6987;
+}
+
+input {
+  width: 160px;
+}
+
+#key.default {
+  color: #888;
+}
+
+#key.last {
+  background: #FAFFBD;
+}
+
+p, ul, li, #toolbar {
+  margin: 0;
+  font-size: 12px;
+  font-family: inherit;
+}
+
+.alert {
+  position: relative;
+  margin: 12px 0 0;
+  padding: 8px;
+}
+
+.alert.with-arrow {
+  margin: 16px 0 0;
+}
+
+.alert .arrow {
+  position: absolute;
+  top: -12px;
+  left: 180px;
+  width: 24px;
+  height: 13px;
+  overflow: hidden;
+}
+
+.alert .arrow:after {
+  content: "";
+  position: absolute;
+  left: 3px;
+  top: 4px;
+  width: 16px;
+  height: 16px;
+  background-color: #FCF8E3;
+  border: 1px solid #FBEED5;
+  -webkit-transform: rotate(45deg);
+}
+
+.alert-error .arrow:after {
+  background-color: #F2DEDE;
+  border-color: #EED3D7;
+}
+
+.alert-info .arrow:after {
+  background-color: #D9EDF7;
+  border-color: #BCE8F1;
+}
+
+.alert-success .arrow:after {
+  background-color: #DFF0D8;
+  border-color: #D6E9C6;
+}
+
+.alert .close {
+  right: -2px;
+  top: -6px;
+  font-size: inherit;
+}
+
+.alert-heading {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.alert .message-list {
+  list-style-position: inside;
+}
+
+a {
+  cursor: pointer;
+}
+
+a img {
+  vertical-align: middle;
+  margin-right: 4px;
+}
+
+#toolbar {
+  text-align: right;
+}
+
+#toolbar a {
+  margin-left: 10px;
+}
+
+span.help {
+  border-bottom: 1px dotted;
+  cursor: help;
+}

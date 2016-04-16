@@ -1,0 +1,42 @@
+body {
+  font: 14px/1.5 Tahoma, Helvetica, Arial, \5b8b\4f53;
+  color: #000;
+}
+
+label {
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
+input {
+  font-size: 14px;
+  font-family: inherit;
+  padding: 5px;
+}
+
+.checkbox {
+  padding-left: 10px;
+}
+
+.checkbox input[type="checkbox"] {
+  width: 15px;
+  height: 15px;
+  margin: 2px 10px 0 0;
+  border-radius: 3px;
+  -webkit-appearance: none;
+}
+
+.checkbox input[type="checkbox"]:checked:after {
+  content: url(../img/checkmark.png);
+  bottom: 1px;
+  position: relative;
+}
+
+.form-horizontal .control-label {
+  width: 60px;
+  padding-top: 6px;
+}
+
+.form-horizontal .controls {
+  margin-left: 70px;
+}

@@ -1,0 +1,46 @@
+body {
+  text-align: center;
+}
+
+header {
+  width: 540px;
+  height: 50px;
+  margin: 0 auto;
+  text-align: left;
+  border-bottom: 2px solid #08C;
+}
+
+header h1 {
+  line-height: 48px;
+  font-size: 32px;
+  color: #08C;
+}
+
+#main {
+  width: 540px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.control-group:first-child {
+  margin-top: 18px;
+}
+
+p {
+  font-size: 12px;
+  font-family: inherit;
+  color: #999;
+  margin-bottom: 18px;
+  text-align: left;
+}
+
+.center {
+  text-align: center;
+}
+
+footer {
+  margin: 18px auto;
+  border-top: 2px solid #08C;
+  padding: 5px 0 0;
+  width: 540px;
+}
