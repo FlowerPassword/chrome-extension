@@ -1,4 +1,5 @@
 body {
+  background-color: transparent;
   overflow: hidden;
 }
 
@@ -8,6 +9,7 @@ body {
   border: 2px solid #08C;
   position: relative;
   line-height: 1;
+  background-color: #fff;
 }
 
 #close {

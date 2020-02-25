@@ -18,6 +18,7 @@ function showAllPageActions() {
     });
 }
 
+// Unchecked runtime.lastError: Could not establish connection. Receiving end does not exist.
 function updatePageAction(tab) {
     chrome.pageAction.hide(tab.id);
     messages.extension.sendTo(tab.id, 'getLocalEnabled');
@@ -64,7 +65,7 @@ function attachListeners() {
             document.execCommand('copy');
         }
     });
-    chrome.extension.onMessage.addListener(function(request, sender, sendResponse) {
+    chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
         if (request.transit) {
             chrome.tabs.sendMessage(sender.tab.id, request, function(response) {
                 if (sendResponse) {

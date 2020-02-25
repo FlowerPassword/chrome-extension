@@ -103,12 +103,15 @@ if (isTopWindow()) {
         }
 
         function injectIframe() {
-            if ($('#flower-password-iframe').size() > 0) {
-                return;
-            }
-            $('body').append('<iframe id="flower-password-iframe" src="' + getURL('iframe.html') + '" style="display: none;"></iframe>');
-            if (options.isTransparent()) {
-                $('#flower-password-iframe').addClass('transparent');
+            // inject iframe except chrome pdf view
+            if ($('body embed[type="application/pdf"]').length === 0) {
+                if ($('#flower-password-iframe').size() > 0) {
+                    return;
+                }
+                $('body').append('<iframe id="flower-password-iframe" src="' + getURL('iframe.html') + '" style="display: none;"></iframe>');
+                if (options.isTransparent()) {
+                    $('#flower-password-iframe').addClass('transparent');
+                }
             }
         }
 

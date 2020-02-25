@@ -2,7 +2,7 @@ $(function() {
     options.init();
 
     options.global.set = mergeFuns(options.global.set, function(name, value) {
-        chrome.extension.sendMessage({action: 'setGlobalOption', name: name, value: value}, function(){});
+        chrome.runtime.sendMessage({action: 'setGlobalOption', name: name, value: value}, function(){});
     });
 
     $('#default-enabled').prop("checked", options.global.cache.defaultEnabled).change(function() {
