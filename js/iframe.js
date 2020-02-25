@@ -52,7 +52,8 @@ function fillDefaultKey() {
 
 function adjustIframeSize(locate) {
     var width = $('#main').outerWidth();
-    var height = $('#main').outerHeight();
+    var height = 400;
+    
     messages.page.sendToTop('setIframeSize', {width: width, height: height, locate: locate});
 }
 
